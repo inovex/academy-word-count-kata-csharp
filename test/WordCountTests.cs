@@ -4,15 +4,15 @@ namespace WordCount.Test
     public class WordCountTests
     {
         [Test]
-        public void HandleInput_OneWord_SaysNumberIsOne()
+        public void HandleInoput_OneWord_SaysNumberIsOne()
         {
-            String input = "foo";
-            String expectedOutput = "Number of words: 1";
-            WordCount wordCount = new WordCount();
+            var input = "foo";
+            var expectedOutput = "Number of words: 1";
+            var wordCount = new WordCount();
 
-            String output = wordCount.HandleInput(input);
+            var output = wordCount.HandleInput(input);
 
-            Assert.AreEqual(output, expectedOutput);
+            Assert.That(expectedOutput, Is.EqualTo(output));
         }
     }
 }
